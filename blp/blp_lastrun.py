@@ -1,8 +1,8 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy2 Experiment Builder (v1.85.4),
-    on Tue Oct 17 14:18:06 2017
+    on Wed Apr  3 11:00:07 2019
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -11,7 +11,7 @@ If you publish work using this script please cite the PsychoPy publications:
 """
 
 from __future__ import absolute_import, division
-from psychopy import locale_setup, sound, gui, visual, core, data, event, logging
+from psychopy import locale_setup, sound, gui, visual, core, data, event, logging, clock
 from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
                                 STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
 import numpy as np  # whole numpy lib is available, prepend 'np.'
@@ -26,7 +26,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__)).decode(sys.getfilesystemen
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-expName = u'blp'  # from the Builder filename that created this script
+expName = 'blp'  # from the Builder filename that created this script
 expInfo = {u'participant': u'', u'country': u'', u'age': u'', u'highest level of ed': u'', u'gender': u'', u'place of residence': u'city,state'}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
 if dlg.OK == False:
@@ -40,7 +40,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath=u'/Users/casillas/code/psychopy/psychopy_templates/blp/blp.psyexp',
+    originPath=u'/Users/drakeasberry/github/psychopy_templates/blp/blp.psyexp',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -53,9 +53,9 @@ endExpNow = False  # flag for 'escape' or other condition => quit the exp
 
 # Setup the Window
 win = visual.Window(
-    size=(1680, 1050), fullscr=True, screen=0,
+    size=[1680, 1050], fullscr=True, screen=0,
     allowGUI=True, allowStencil=False,
-    monitor=u'testMonitor', color=[0,0,0], colorSpace='rgb',
+    monitor='testMonitor', color=[0,0,0], colorSpace='rgb',
     blendMode='avg', useFBO=True)
 # store frame rate of monitor if we can measure it
 expInfo['frameRate'] = win.getActualFrameRate()
@@ -113,10 +113,10 @@ rating_lang_hist = visual.RatingScale(win=win, name='rating_lang_hist', marker=u
 # Initialize components for Routine "lang_use_ins"
 lang_use_insClock = core.Clock()
 text_lang_use_ins = visual.TextStim(win=win, name='text_lang_use_ins',
-    text=u'Language use\n\nIn this section, we would like you to answer some questions about your language use by placing a check in the appropriate box. Total use for all languages in a given question should equal 100%.\n\nPress the spacebar to begin.',
-    font=u'Arial',
+    text='Language use\n\nIn this section, we would like you to answer some questions about your language use by placing a check in the appropriate box. Total use for all languages in a given question should equal 100%.\n\nPress the spacebar to begin.',
+    font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "language_use"
@@ -145,81 +145,81 @@ text_lang_use_qnum = visual.TextStim(win=win, name='text_lang_use_qnum',
     pos=(-0.9, 0.9), height=0.1, wrapWidth=None, ori=0, 
     color=u'white', colorSpace='rgb', opacity=1,
     depth=-3.0);
-rating_lang_use = visual.RatingScale(win=win, name='rating_lang_use', marker=u'triangle', size=0.8, pos=[0.0, -0.5], choices=[u'0', u'10', u'20', u'40', u'50', u'60', u'70', u'80', u'90', u'100'], tickHeight=-1)
+rating_lang_use = visual.RatingScale(win=win, name='rating_lang_use', marker='triangle', size=0.8, pos=[0.0, -0.5], choices=[u'0', u'10', u'20', u'40', u'50', u'60', u'70', u'80', u'90', u'100'], tickHeight=-1)
 
 # Initialize components for Routine "lang_prof_ins"
 lang_prof_insClock = core.Clock()
 text_lang_prof_ins = visual.TextStim(win=win, name='text_lang_prof_ins',
-    text=u'Language proficiency\n\nIn this section, we would like you to rate your language proficiency by giving marks from 0 to 6.\n\nPress the spacebar to begin',
-    font=u'Arial',
+    text='Language proficiency\n\nIn this section, we would like you to rate your language proficiency by giving marks from 0 to 6.\n\nPress the spacebar to begin',
+    font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "language_proficiency"
 language_proficiencyClock = core.Clock()
 text_section_lang_prof = visual.TextStim(win=win, name='text_section_lang_prof',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(0, 0.75), height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=0.0);
 text_lang_prof_question = visual.TextStim(win=win, name='text_lang_prof_question',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-1.0);
 text_lang_prof_lang = visual.TextStim(win=win, name='text_lang_prof_lang',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(0.0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color=u'blue', colorSpace='rgb', opacity=1,
+    color='blue', colorSpace='rgb', opacity=1,
     depth=-2.0);
 text_lang_prof_qnum = visual.TextStim(win=win, name='text_lang_prof_qnum',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(-0.9, 0.9), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-3.0);
 text_lang_prof_qmark = visual.TextStim(win=win, name='text_lang_prof_qmark',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(0.17, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-4.0);
-rating_lang_prof = visual.RatingScale(win=win, name='rating_lang_prof', marker=u'triangle', size=1.0, pos=[0.0, -0.4], low=0, high=6, labels=[u'Not well at all', u' Very well'], scale=u'')
+rating_lang_prof = visual.RatingScale(win=win, name='rating_lang_prof', marker='triangle', size=1.0, pos=[0.0, -0.4], low=0, high=6, labels=['Not well at all', ' Very well'], scale='')
 
 # Initialize components for Routine "lang_att_ins"
 lang_att_insClock = core.Clock()
 text_lang_att_ins = visual.TextStim(win=win, name='text_lang_att_ins',
-    text=u'Language attitudes\n\nIn this section, we would like you to respond to statements about language attitudes by giving marks from 0-6.\n\nPress the spacebar to begin.',
-    font=u'Arial',
+    text='Language attitudes\n\nIn this section, we would like you to respond to statements about language attitudes by giving marks from 0-6.\n\nPress the spacebar to begin.',
+    font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "language_attitudes"
 language_attitudesClock = core.Clock()
 text_lang_att_section = visual.TextStim(win=win, name='text_lang_att_section',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(0, 0.75), height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=0.0);
 text_lang_att_ques = visual.TextStim(win=win, name='text_lang_att_ques',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-1.0);
 text_lang_att_qnum = visual.TextStim(win=win, name='text_lang_att_qnum',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(-0.9, 0.9), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=-2.0);
-rating_lang_att = visual.RatingScale(win=win, name='rating_lang_att', marker=u'triangle', size=1.0, pos=[0.0, -0.4], low=0, high=6, labels=[u'disagree', u' agree'], scale=u'')
+rating_lang_att = visual.RatingScale(win=win, name='rating_lang_att', marker='triangle', size=1.0, pos=[0.0, -0.4], low=0, high=6, labels=['disagree', ' agree'], scale='')
 
 # Create some handy timers
 globalClock = core.Clock()  # to track the time since experiment started
@@ -366,21 +366,21 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_hist = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(u'condition_file/en_trials.csv', selection='0:12'),
+    trialList=data.importConditions('condition_file/en_trials.csv', selection=u'0:12'),
     seed=None, name='trials_hist')
 thisExp.addLoop(trials_hist)  # add the loop to the experiment
 thisTrials_hist = trials_hist.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrials_hist.rgb)
 if thisTrials_hist != None:
-    for paramName in thisTrials_hist.keys():
-        exec(paramName + '= thisTrials_hist.' + paramName)
+    for paramName in thisTrials_hist:
+        exec('{} = thisTrials_hist[paramName]'.format(paramName))
 
 for thisTrials_hist in trials_hist:
     currentLoop = trials_hist
     # abbreviate parameter names if possible (e.g. rgb = thisTrials_hist.rgb)
     if thisTrials_hist != None:
-        for paramName in thisTrials_hist.keys():
-            exec(paramName + '= thisTrials_hist.' + paramName)
+        for paramName in thisTrials_hist:
+            exec('{} = thisTrials_hist[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "language_history"-------
     t = 0
@@ -544,21 +544,21 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_use = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(u'condition_file/en_trials.csv', selection='12:27'),
+    trialList=data.importConditions('condition_file/en_trials.csv', selection=u'12:27'),
     seed=None, name='trials_use')
 thisExp.addLoop(trials_use)  # add the loop to the experiment
 thisTrials_use = trials_use.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrials_use.rgb)
 if thisTrials_use != None:
-    for paramName in thisTrials_use.keys():
-        exec(paramName + '= thisTrials_use.' + paramName)
+    for paramName in thisTrials_use:
+        exec('{} = thisTrials_use[paramName]'.format(paramName))
 
 for thisTrials_use in trials_use:
     currentLoop = trials_use
     # abbreviate parameter names if possible (e.g. rgb = thisTrials_use.rgb)
     if thisTrials_use != None:
-        for paramName in thisTrials_use.keys():
-            exec(paramName + '= thisTrials_use.' + paramName)
+        for paramName in thisTrials_use:
+            exec('{} = thisTrials_use[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "language_use"-------
     t = 0
@@ -722,21 +722,21 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_prof = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(u'condition_file/en_trials.csv', selection='27:35'),
+    trialList=data.importConditions('condition_file/en_trials.csv', selection=u'27:35'),
     seed=None, name='trials_prof')
 thisExp.addLoop(trials_prof)  # add the loop to the experiment
 thisTrials_prof = trials_prof.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrials_prof.rgb)
 if thisTrials_prof != None:
-    for paramName in thisTrials_prof.keys():
-        exec(paramName + '= thisTrials_prof.' + paramName)
+    for paramName in thisTrials_prof:
+        exec('{} = thisTrials_prof[paramName]'.format(paramName))
 
 for thisTrials_prof in trials_prof:
     currentLoop = trials_prof
     # abbreviate parameter names if possible (e.g. rgb = thisTrials_prof.rgb)
     if thisTrials_prof != None:
-        for paramName in thisTrials_prof.keys():
-            exec(paramName + '= thisTrials_prof.' + paramName)
+        for paramName in thisTrials_prof:
+            exec('{} = thisTrials_prof[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "language_proficiency"-------
     t = 0
@@ -748,7 +748,7 @@ for thisTrials_prof in trials_prof:
     text_lang_prof_question.setText(questionText)
     text_lang_prof_lang.setText(language)
     text_lang_prof_qnum.setText(questionNum)
-    text_lang_prof_qmark.setText(u'?')
+    text_lang_prof_qmark.setText('?')
     rating_lang_prof.reset()
     # keep track of which components have finished
     language_proficiencyComponents = [text_section_lang_prof, text_lang_prof_question, text_lang_prof_lang, text_lang_prof_qnum, text_lang_prof_qmark, rating_lang_prof]
@@ -908,21 +908,21 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_att = data.TrialHandler(nReps=1, method='sequential', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(u'condition_file/en_trials.csv', selection='35:43'),
+    trialList=data.importConditions('condition_file/en_trials.csv', selection=u'35:43'),
     seed=None, name='trials_att')
 thisExp.addLoop(trials_att)  # add the loop to the experiment
 thisTrials_att = trials_att.trialList[0]  # so we can initialise stimuli with some values
 # abbreviate parameter names if possible (e.g. rgb = thisTrials_att.rgb)
 if thisTrials_att != None:
-    for paramName in thisTrials_att.keys():
-        exec(paramName + '= thisTrials_att.' + paramName)
+    for paramName in thisTrials_att:
+        exec('{} = thisTrials_att[paramName]'.format(paramName))
 
 for thisTrials_att in trials_att:
     currentLoop = trials_att
     # abbreviate parameter names if possible (e.g. rgb = thisTrials_att.rgb)
     if thisTrials_att != None:
-        for paramName in thisTrials_att.keys():
-            exec(paramName + '= thisTrials_att.' + paramName)
+        for paramName in thisTrials_att:
+            exec('{} = thisTrials_att[paramName]'.format(paramName))
     
     # ------Prepare to start Routine "language_attitudes"-------
     t = 0
